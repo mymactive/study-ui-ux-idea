@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.3"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.3/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"インストラクター向けデザイン","children":[{"type":"heading","depth":1,"payload":{"lines":[2,3]},"content":"トレーニングのストーリー","children":[{"type":"ordered_list","depth":2,"payload":{"lines":[4,20],"startIndex":1},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[4,5],"index":1},"content":"1. トレーナーとトレーニーが顔合わせをする"},{"type":"list_item","depth":3,"payload":{"lines":[5,6],"index":2},"content":"2. トレーナーはトレーニーが予定の人物かを確認する","children":[{"type":"list_item","depth":4,"payload":{"lines":[6,7],"index":1},"content":"1. トレーニーの紹介機能が必要"}]},{"type":"list_item","depth":3,"payload":{"lines":[7,8],"index":3},"content":"3. トレーナーはトレーニーにトレーニングメニューを伝える","children":[{"type":"list_item","depth":4,"payload":{"lines":[8,9],"index":1},"content":"1. トレーニングメニューは前もって決められるようにする必要がある"}]},{"type":"list_item","depth":3,"payload":{"lines":[9,10],"index":4},"content":"4. トレーニーはトレーニングメニューを実施する","children":[{"type":"list_item","depth":4,"payload":{"lines":[10,11],"index":1},"content":"1. トレーナーはトレーニーにトレーニング種目をつたえる"},{"type":"list_item","depth":4,"payload":{"lines":[11,12],"index":2},"content":"2. トレーニーはトレーニングをする"},{"type":"list_item","depth":4,"payload":{"lines":[12,13],"index":3},"content":"3. トレーナーはトレーニーに助言をする"},{"type":"list_item","depth":4,"payload":{"lines":[13,14],"index":4},"content":"4. トレーニング後にトレーナーはトレーニングの評価をする"},{"type":"list_item","depth":4,"payload":{"lines":[14,15],"index":5},"content":"5. 実施したトレーニングを記録する"},{"type":"list_item","depth":4,"payload":{"lines":[15,16],"index":6},"content":"6. トレーニングメニューが残っていれば1に戻る"}]},{"type":"list_item","depth":3,"payload":{"lines":[16,17],"index":5},"content":"5. トレーニングを終える"},{"type":"list_item","depth":3,"payload":{"lines":[17,18],"index":6},"content":"6. トレーナーはトレーニーに次回トレーニングの予約の相談をする"},{"type":"list_item","depth":3,"payload":{"lines":[18,19],"index":7},"content":"7. トレーニーはジムを離れる"}]},{"type":"bullet_list","depth":2,"payload":{"lines":[20,24]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[20,21]},"content":"ストーリー上最も重要なのはトレーニングメニューを考えることではないだろうか？","children":[{"type":"list_item","depth":4,"payload":{"lines":[21,22]},"content":"トレーナーが価値を提供するのは、トレーニーへの指導","children":[{"type":"list_item","depth":5,"payload":{"lines":[22,23]},"content":"トレーニーへの指導の大きな要素がトレーニングメニュー考慮と思われる","children":[{"type":"list_item","depth":6,"payload":{"lines":[23,24]},"content":"トレーニングメニューの選択機能のUXを最大化すれば良いのでは？"}]}]}]}]}]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"トレーニングメニュー選択","children":[{"type":"bullet_list","depth":2,"payload":{"lines":[28,40]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[28,29]},"content":"目的は？","children":[{"type":"list_item","depth":4,"payload":{"lines":[29,30]},"content":"最適なトレーニングメニューを選べる","children":[{"type":"list_item","depth":5,"payload":{"lines":[30,31]},"content":"最適なトレーニングメニューとは？","children":[{"type":"list_item","depth":6,"payload":{"lines":[31,32]},"content":"トレーナーの知識を最大限引き出せる状態で選ばれたメニュー","children":[{"type":"list_item","depth":7,"payload":{"lines":[32,33]},"content":"最大限引き出せる状態とは？","children":[{"type":"list_item","depth":8,"payload":{"lines":[33,34]},"content":"トレーニーの身体的特徴を把握できている"},{"type":"list_item","depth":8,"payload":{"lines":[34,35]},"content":"トレーニーのトレーニング状況を把握できている"},{"type":"list_item","depth":8,"payload":{"lines":[35,36]},"content":"トレーニングメニューを把握できている","children":[{"type":"list_item","depth":9,"payload":{"lines":[36,37]},"content":"トレーニングメニューの数によっては、一目で把握できるような状況は提供できないのでは？","children":[{"type":"list_item","depth":10,"payload":{"lines":[37,38]},"content":"その通りである。しかしトレーナーは専門家であるという前提のもとに、この機能はあまり考慮しない"}]}]}]}]},{"type":"list_item","depth":6,"payload":{"lines":[38,39]},"content":"トレーニーの目的を達成するためのメニュー"}]}]}]}]},{"type":"bullet_list","depth":2,"payload":{"lines":[45,74]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[45,46]},"content":"最適なメニューを選ぶために必要な知識","children":[{"type":"list_item","depth":4,"payload":{"lines":[46,47]},"content":"トレーニーの身体的特徴","children":[{"type":"list_item","depth":5,"payload":{"lines":[47,48]},"content":"体重"},{"type":"list_item","depth":5,"payload":{"lines":[48,49]},"content":"身長"},{"type":"list_item","depth":5,"payload":{"lines":[49,50]},"content":"性別"},{"type":"list_item","depth":5,"payload":{"lines":[50,51]},"content":"体脂肪率（最新）"},{"type":"list_item","depth":5,"payload":{"lines":[51,52]},"content":"血圧?（最新）"},{"type":"list_item","depth":5,"payload":{"lines":[52,53]},"content":"備考欄"}]},{"type":"list_item","depth":4,"payload":{"lines":[53,54]},"content":"トレーニーの情報","children":[{"type":"list_item","depth":5,"payload":{"lines":[54,55]},"content":"氏名（かな）"}]},{"type":"list_item","depth":4,"payload":{"lines":[55,56]},"content":"トレーニーのトレーニング状況","children":[{"type":"list_item","depth":5,"payload":{"lines":[56,57]},"content":"何件まで？"},{"type":"list_item","depth":5,"payload":{"lines":[57,58]},"content":"トレーニング情報","children":[{"type":"list_item","depth":6,"payload":{"lines":[58,59]},"content":"実施日"},{"type":"list_item","depth":6,"payload":{"lines":[59,60]},"content":"実施種目"},{"type":"list_item","depth":6,"payload":{"lines":[60,61]},"content":"種目毎の実施時間"},{"type":"list_item","depth":6,"payload":{"lines":[61,62]},"content":"カテゴリー"},{"type":"list_item","depth":6,"payload":{"lines":[62,63]},"content":"トレーニング部位"},{"type":"list_item","depth":6,"payload":{"lines":[63,64]},"content":"トレーニング時間"},{"type":"list_item","depth":6,"payload":{"lines":[64,65]},"content":"トレーニング評価"},{"type":"list_item","depth":6,"payload":{"lines":[65,66]},"content":"伝達事項"}]}]},{"type":"list_item","depth":4,"payload":{"lines":[66,67]},"content":"トレーニングメニュー一覧","children":[{"type":"list_item","depth":5,"payload":{"lines":[67,68]},"content":"何件ある？","children":[{"type":"list_item","depth":6,"payload":{"lines":[68,69]},"content":"身体として鍛える部位は？","children":[{"type":"list_item","depth":7,"payload":{"lines":[69,70]},"content":"腕"},{"type":"list_item","depth":7,"payload":{"lines":[70,71]},"content":"胸"},{"type":"list_item","depth":7,"payload":{"lines":[71,72]},"content":"背中"},{"type":"list_item","depth":7,"payload":{"lines":[72,73]},"content":"太腿"},{"type":"list_item","depth":7,"payload":{"lines":[73,74]},"content":"ふくらはぎ"}]}]}]}]}]}]}]},{})</script>
+</body>
+</html>
